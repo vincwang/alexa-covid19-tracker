@@ -15,8 +15,8 @@
             "tracker",
             "virus"
           ],
-          "name": "Covid19 Tracker",
-          "description": "You can ask Alexa about Covid19 cases such as how many cases have been reported in a state or a country. You can also ask about the top states and countries with most cases.",
+          "name": "Coronavirus Tracker",
+          "description": "You can ask Alexa about coronavirus cases such as how many cases have been reported in a state or a country. You can also ask about the top states and countries with most cases.",
           "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
           "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
         }
