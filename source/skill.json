@@ -1,5 +1,40 @@
 {
   "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Get information about Covid19 cases",
+          "examplePhrases": [
+            "Alexa ask coronavirus tracker how many cases of coronavirus have been reported in New York?",
+            "Alexa ask coronavirus tracker which states have most coronavirus cases?",
+            "Alexa open coronavirus tracker!"
+          ],
+          "keywords": [
+            "coronavirus",
+            "covid19",
+            "tracker",
+            "virus"
+          ],
+          "name": "Covid19 Tracker",
+          "description": "You can ask Alexa about Covid19 cases such as how many cases have been reported in a state or a country. You can also ask about the top states and countries with most cases.",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "sourceLocaleForLanguages": [
+          {
+            "sourceLocale": "en-US",
+            "language": "en"
+          }
+        ],
+        "isActive": true
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "1. Ask about coronavirus cases in a given state\nYou can ask questions such as \"Alexa ask coronavirus tracker how many cases have been reported in New York?\" to get information about the cases in New York. This skill also saves the last asked state as the default state, so that when you ask next time without mentioning the state, it will default to the last asked state.\n2. Launch request\nYou can launch the skill by saying \"open coronavirus tracker\", and following the prompt you can continue to ask anything to invoke other intents.\n3. Ask about coronavirus cases in a given state \nYou can ask questions such as \"Alexa ask coronavirus tracker how many cases have been reported in Japan?\" to get information about the cases in Japan\n4. Ask about top counties with most cases\nYou can ask \"What are the top ten countries with most coronavirus cases?\"\n5. Ask about top states with most cases\nYou can ask \"What are the top ten states with most coronavirus cases?\"",
+      "category": "NEWS",
+      "distributionCountries": []
+    },
     "apis": {
       "custom": {
         "endpoint": {
@@ -9,29 +44,18 @@
       }
     },
     "manifestVersion": "1.0",
-    "permissions": [
-      {
-        "name": "alexa::devices:all:address:full:read"
-      }
-    ],
-    "publishingInformation": {
-      "category": "KNOWLEDGE_AND_TRIVIA",
-      "distributionCountries": [],
-      "isAvailableWorldwide": true,
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
       "locales": {
         "en-US": {
-          "description": "Sample Full Description",
-          "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
-          ],
-          "keywords": [],
-          "name": "corona virus tracker",
-          "summary": "Sample Short Description"
+          "privacyPolicyUrl": "https://github.com/vincwang/alexa-covid19-tracker/blob/master/privacy-policy-text-english.txt"
         }
       },
-      "testingInstructions": "Sample Testing Instructions."
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
     }
   }
 }

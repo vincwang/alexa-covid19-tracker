@@ -63,7 +63,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Hello! Welcome to Coronavirus Tracker, how may I help you today?';
+        const speakOutput = 'Hello! What do you want to know about coronavirus cases?';
         const repromptText = 'You can say how many cases of coronavirus have been reported?';
 
         return handlerInput.responseBuilder
@@ -91,7 +91,7 @@ const CurrentStateIntentHandler = {
         try {
           const stateDataYesterday = await fetchDataOnState(userState, true);
           const speechText = `As of yesterday, there have been ${stateDataYesterday.todayCases} new cases confirmed of the coronavirus and 
-          ${stateDataYesterday.todayDeaths} new deaths in ${userState}. Overall, there have been a total of ${stateDataYesterday.cases} cases 
+          ${stateDataYesterday.todayDeaths} new deaths in ${userState}. Overall, there has been a total of ${stateDataYesterday.cases} cases 
           and ${stateDataYesterday.deaths} deaths reported in ${userState}`;
     
           return handlerInput.responseBuilder
@@ -122,7 +122,7 @@ const CaptureStateIntentHandler = {
         try {
           const stateDataYesterday = await fetchDataOnState(state, true);
           const speechText = `As of yesterday, there have been ${stateDataYesterday.todayCases} new cases confirmed of the coronavirus and 
-          ${stateDataYesterday.todayDeaths} new deaths in ${state}. Overall, there have been a total of ${stateDataYesterday.cases} cases 
+          ${stateDataYesterday.todayDeaths} new deaths in ${state}. Overall, there has been a total of ${stateDataYesterday.cases} cases 
           and ${stateDataYesterday.deaths} deaths reported in ${state}`;
     
           return handlerInput.responseBuilder
@@ -145,7 +145,7 @@ const CaptureCountryIntentHandler = {
         try {
           const countryData = await fetchDataOnCountry(country);
           const speechText = `As of yesterday, there have been ${countryData.todayCases} new cases confirmed of the coronavirus and 
-          ${countryData.todayDeaths} new deaths in ${country}. Overall, there have been a total of ${countryData.cases} cases reported in ${country},
+          ${countryData.todayDeaths} new deaths in ${country}. Overall, there has been a total of ${countryData.cases} cases reported in ${country},
           ${countryData.recovered} of them have recovered and ${countryData.deaths} have died so far`;
     
           return handlerInput.responseBuilder
@@ -166,7 +166,7 @@ const CaptureGlobalIntentHandler = {
         try {
           const globalData = await fetchDataOnGlobal();
           const speechText = `As of yesterday, there have been ${globalData.todayCases} new cases confirmed of the coronavirus and 
-          ${globalData.todayDeaths} new deaths globally. Overall, there have been a total of ${globalData.cases} cases reported globally,
+          ${globalData.todayDeaths} new deaths globally. Overall, there has been a total of ${globalData.cases} cases reported globally,
           ${globalData.recovered} of them have recovered and ${globalData.deaths} have died so far`;
     
           return handlerInput.responseBuilder

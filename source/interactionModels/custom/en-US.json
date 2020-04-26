@@ -54,18 +54,26 @@
           "name": "CaptureCurrentStateIntent",
           "slots": [],
           "samples": [
+            "How many cases of covid nineteen were reported",
+            "How many cases of coronavirus were reported",
             "How many cases of covid nineteen have been reported",
-            "How many covid nineteen cases have been reported",
-            "How many cases of coronavirus have been reported in my state",
-            "How many cases of coronavirus have been reported",
-            "How many cases have been reported",
-            "How many cases of coronavirus"
+            "How many cases of coronavirus have been reported ",
+            "How many coronavirus cases were reported today",
+            "How many covid nineteen cases were reported today",
+            "How many corovavirus cases have been reported",
+            "How many covid nineteen cases have been reported"
           ]
         },
         {
           "name": "CaptureGlobalIntent",
           "slots": [],
           "samples": [
+            "How many cases globally",
+            "How many cases in the world",
+            "How many cases of covid nineteen were reported globally",
+            "How many cases of covid nineteen have been reported globally",
+            "How many cases of covid nineteen were reported in the world",
+            "How many cases of covid nineteen have been reported in the world",
             "How many cases of coronavirus were reported globally",
             "How many cases of coronavirus have been reported globally",
             "How many cases of coronavirus were reported in the world",
@@ -82,6 +90,11 @@
             }
           ],
           "samples": [
+            "What is the number of total cases in {country}",
+            "What is the number of covid nineteen cases in {country}",
+            "What is the number of coronavirus cases in {country}",
+            "How many  covid nineteen cases have been reported in {country}",
+            "How many cases of covid nineteen have been reported in {country}",
             "How many coronavirus cases have been reported in {country}",
             "How many cases in {country}",
             "How many cases have been reported in {country}",
@@ -97,6 +110,12 @@
             }
           ],
           "samples": [
+            "What are the top {numberOfCountries} cournties with covid nineteen cases",
+            "What are the top {numberOfCountries} countries with most covid nineteen cases",
+            "Which are the top {numberOfCountries} countries with most coronavirus cases  ",
+            "Which are the top {numberOfCountries} countries with most cases of coronavirus",
+            "Which country has most confirmed cases  of coronavirus",
+            "What countries have most corona virus cases",
             "What are the top {numberOfCountries} countries",
             "Which are the top {numberOfCountries} countries with most cases",
             "What countries have most cases",
@@ -114,10 +133,13 @@
             }
           ],
           "samples": [
+            "Which states have most covid nineteen cases",
+            "What states have most covid nineteen cases",
+            "What are the top {numberOfStates} with confirmed covid nineteen cases",
             "What states have most coronavirus cases",
             "Which states have most coronavirus cases",
             "What are the top {numberOfStates} states",
-            "What are the top {numberOfStates} with confirmed coronavirus cases"
+            "What are the top {numberOfStates} states with confirmed coronavirus cases"
           ]
         }
       ],
@@ -213,5 +235,5 @@
       }
     ]
   },
-  "version": "25"
+  "version": "28"
 }
