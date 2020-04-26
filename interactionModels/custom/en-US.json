@@ -1,0 +1,217 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "coronavirus tracker",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CaptureStateIntent",
+          "slots": [
+            {
+              "name": "state",
+              "type": "AMAZON.US_STATE",
+              "samples": [
+                "I am interested in {state}",
+                "I live in {state}",
+                "I am from {state}",
+                "{state}",
+                "I want to know about {state}"
+              ]
+            }
+          ],
+          "samples": [
+            "how many cases of coronavirus have been reported in {state}",
+            "How many coronavirus cases does {state} have",
+            "How many covid nineteen cases does {state} have",
+            "How many covid nineteen cases in {state}",
+            "How many covid nineteen in {state}",
+            "How many covid nineteen cases have been reported in {state} ",
+            "How many coronavirus cases have been reported in {state} state",
+            "How many cases in are reported in {state} ",
+            "How many cases in are reported in {state} state",
+            "How many cases have been reported",
+            "How many cases of coronavirus have been reported",
+            "How many coronavirus cases have been reported in {state}",
+            "How many coronavirus cases were reported in {state}  "
+          ]
+        },
+        {
+          "name": "CaptureCurrentStateIntent",
+          "slots": [],
+          "samples": [
+            "How many cases of covid nineteen have been reported",
+            "How many covid nineteen cases have been reported",
+            "How many cases of coronavirus have been reported in my state",
+            "How many cases of coronavirus have been reported",
+            "How many cases have been reported",
+            "How many cases of coronavirus"
+          ]
+        },
+        {
+          "name": "CaptureGlobalIntent",
+          "slots": [],
+          "samples": [
+            "How many cases of coronavirus were reported globally",
+            "How many cases of coronavirus have been reported globally",
+            "How many cases of coronavirus were reported in the world",
+            "How many cases have been reported in the world",
+            "How many cases of coronavirus have been reported in the world"
+          ]
+        },
+        {
+          "name": "CaptureCountryIntent",
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "How many coronavirus cases have been reported in {country}",
+            "How many cases in {country}",
+            "How many cases have been reported in {country}",
+            "How many cases of coronavirus have been reported in {country}"
+          ]
+        },
+        {
+          "name": "CaptureTopCountriesByCasesIntent",
+          "slots": [
+            {
+              "name": "numberOfCountries",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "What are the top {numberOfCountries} countries",
+            "Which are the top {numberOfCountries} countries with most cases",
+            "What countries have most cases",
+            "Which country has most confirmed cases",
+            "Which countries have most confirmed cases",
+            "What are the top {numberOfCountries} countries with most confirmed cases"
+          ]
+        },
+        {
+          "name": "CaptureTopStatesByCasesIntent",
+          "slots": [
+            {
+              "name": "numberOfStates",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "What states have most coronavirus cases",
+            "Which states have most coronavirus cases",
+            "What are the top {numberOfStates} states",
+            "What are the top {numberOfStates} with confirmed coronavirus cases"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CaptureStateIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "state",
+              "type": "AMAZON.US_STATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1158299881376.854491979086"
+              }
+            }
+          ]
+        },
+        {
+          "name": "CaptureCountryIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.398085649058.1502619622130"
+              }
+            }
+          ]
+        },
+        {
+          "name": "CaptureTopCountriesByCasesIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "numberOfCountries",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1158299881376.854491979086",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which state do you want to know about?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1447612228488.385852423538",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your date?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.398085649058.1502619622130",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What country do you want to know about?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1320567765385.1362619995950",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How many countries with most confirmed cases do you want to know "
+          }
+        ]
+      }
+    ]
+  },
+  "version": "25"
+}
